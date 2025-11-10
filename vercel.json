@@ -3,12 +3,22 @@
     {
       "source": "/(sitemap.xml|robots.txt)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
       ]
     }
   ],
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
+  "redirects": [],
+  "rewrites": [
+    {
+      "source": "/(sitemap.xml|robots.txt)",
+      "destination": "/$1"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/index.html"
+    }
   ]
 }
