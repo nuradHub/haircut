@@ -71,6 +71,7 @@ const MainContents = () => {
 
   const navigateToAppointment = ()=> {
     navigate('/appointment')
+    scrollTo(0,0)
   }
 
   useEffect(() => {
