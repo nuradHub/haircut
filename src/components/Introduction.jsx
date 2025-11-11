@@ -11,6 +11,7 @@ const Introduction = () => {
 
   const navigateToAbout = ()=> {
     navigate('/about')
+    scrollTo(0,0)
   }
   
   return (
